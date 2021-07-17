@@ -54,6 +54,17 @@ class Projects(models.Model):
     def delete_project(self):
         self.delete()
 
-    
+    @classmethod
+    def search_projects(cls,search_term):
+        project = cls.objects.filter(title__icontains=search_term)
+        return project
+
+    @classmethod
+    def get_project(cls,id):
+        try:
+            project = Projects.objects.get(pk=id)
+            return project
+        except ObjectDoesNotExist:
+            raise Http404()
     
     
