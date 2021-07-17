@@ -5,6 +5,13 @@ YEGON JOHNSTONE
 
 ## Description
 This is a django-python application where developers can upload their projects and peers can review and rate them. Projects are reviewed and rated according to usability, design and content.
+
+## github link
+https://github.com/jwy951/jowiye_awwards.git
+
+## github link
+
+
 ## API Endpoints (url / uri)
     - CRUD : Create, Retrieve, Update, Delete 
     - Create List and Search
@@ -42,6 +49,7 @@ As a user, you can:
 
 ## System Features/Objectives
 
+
 ###  Projects
 
 Projects  have a Title, an image of the project's landing page, a detailed description of the project, a link to the live site.
@@ -57,9 +65,6 @@ Project have a user profile that has the following information:
 
     The application  have a solid authentication system that allows users to sign up or log in to the application before posting or rating a project.
 
-
-
- 
 ##  API Endpoints
     You should create an API so that users can access data from your application. You can create two API endpoints:
 
@@ -95,9 +100,7 @@ Projects- This endpoint return information pertaining to all the projects posted
 
 ##  Known-Bugs
 
-    Cannot search for projects
-
-
+    No known bugs
 
 ## License
 
