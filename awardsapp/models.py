@@ -40,3 +40,8 @@ class Projects(models.Model):
     title = models.CharField(max_length=255)
     link = models.URLField()
     author_profile = models.ForeignKey(Profile, on_delete=models.CASCADE, blank = True, null=True)
+
+    def save_project(self):
+        self.save()
+    
+    
