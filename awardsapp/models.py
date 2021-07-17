@@ -50,5 +50,10 @@ class Projects(models.Model):
     class Meta:
         db_table = 'project'
         ordering = ['-created_date']
+        
+    def delete_project(self):
+        self.delete()
+
+    
     
     
