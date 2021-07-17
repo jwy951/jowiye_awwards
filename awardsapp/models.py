@@ -21,3 +21,14 @@ class Profile(models.Model):
 
     class Meta:
         db_table = 'profile'
+        
+    @receiver(post_save, sender=User)
+    def update_create_profile(sender,instance,created, **kwargs):
+        try:
+            instance.profile.save()
+        except ObjectDoesNotExist:
+            Profile.objects.create(user=instance)
+
+
+    def save_profile(self):
+        self.save()
