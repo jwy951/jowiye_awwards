@@ -4,9 +4,10 @@
 {% block content %}
 <div class="container" style="background-color: rgb(20, 10, 20); color:aliceblue;"><br>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 bg-secondary">
       {% if form.errors %}
-        <p> Please check your details </p>
+      <p> Please check your details </p>
       {% endif %}
       <div class="panel-default">
         <div class="panel-heading">
@@ -14,7 +15,7 @@
         </div>
         <div class="panel-body">
 
-          <form action="/accounts/register/"  method="POST">
+          <form action="/accounts/register/" method="POST">
             {% csrf_token %}
             {% bootstrap_form form %}
             <div class="form-group">
@@ -24,9 +25,10 @@
             <input type="hidden" name="newprofile" value="newprofile">
 
           </form>
-              <div class="border-bottom pt-3">
-                <p class="text-muted">Already have an account?<a class="ml-2 text-info" href="{% url 'login' %}">SignIn</a></p>
-              </div>
+          <div class="border-bottom pt-3">
+            <p class="text-muted">Already have an account?<a class="ml-2 text-info" href="{% url 'login' %}">SignIn</a>
+            </p>
+          </div>
         </div>
 
       </div>
@@ -34,6 +36,7 @@
     </div>
     <div class="col-md-4"></div>
   </div>
+  <div class="col-md-4"></div>
 </div>
 
 {% endblock %}
