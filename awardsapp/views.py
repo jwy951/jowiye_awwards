@@ -118,7 +118,7 @@ def search_projects(request):
         
         return render(request, 'search.html', {"message":message, "projects": searched_projects})
     else:
-        message = "You haven't searched for any user"
+        message = "You haven't searched for any project"
 
         return render(request, 'search.html', {"message":message})
 
