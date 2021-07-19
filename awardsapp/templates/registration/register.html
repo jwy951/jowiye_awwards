@@ -19,14 +19,13 @@
             {% csrf_token %}
             {% bootstrap_form form %}
             <div class="form-group">
-              <input type="submit" class="btn btn-primary btn-lg" value="SignUp">
+              <input type="submit" class="btn btn-primary" value="SignUp">
             </div>
 
             <input type="hidden" name="newprofile" value="newprofile">
-
           </form>
           <div class="border-bottom pt-3">
-            <p class="text-muted">Already have an account?<a class="ml-2 text-info" href="{% url 'login' %}">SignIn</a>
+            <p class="text-muted">Already have an account?<a class="btn btn-primary" href="{% url 'login' %}">SignIn</a>
             </p>
           </div>
         </div>
